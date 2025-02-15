@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Ejemplo de Float</title>
+</head>
+<body>
+
+    <h1>Ejemplo de la Propiedad Float</h1>
+
+    <!-- Sección 1: Cajas flotantes -->
+    <h2>Cajas flotantes</h2>
+    <div class="contenedor">
+        <div class="caja caja1">Caja 1 (float: left)</div>
+        <div class="caja caja2">Caja 2 (float: right)</div>
+        <div class="caja caja3">Caja 3 (float: left)</div>
+        <div class="caja caja4">Caja 4 (float: right)</div>
+    </div>
+
+    <div class="clear"></div> <!-- Para evitar colapsos con float -->
+
+    <!-- Sección 2: Imagen flotante con texto envolvente -->
+    <h2>Imagen flotante con texto envolvente</h2>
+    <div class="texto-con-imagen">
+        <img src="https://via.placeholder.com/150" alt="Imagen flotante">
+        <p>
+            Esta es una imagen flotante que se encuentra a la izquierda del texto. 
+            El texto envuelve la imagen de manera natural. La propiedad `float: left` 
+            permite que la imagen se posicione en un lado y el texto fluya a su alrededor.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut dui 
+            et nunc euismod consectetur. Aliquam erat volutpat. Nulla facilisi. Fusce nec 
+            metus a risus feugiat luctus ac id velit.
+        </p>
+    </div>
+
+    <div class="clear"></div> <!-- Para evitar colapsos con float -->
+
+</body>
+</html>
