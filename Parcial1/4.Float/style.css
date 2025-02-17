@@ -1,18 +1,21 @@
 /* Estilos generales */
-body {
+body 
+{
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 0;
     background-color: #f4f4f4;
 }
 
-h1, h2 {
+h1, h2 
+{
     text-align: center;
     color: #333;
 }
 
 /* Sección 1: Cajas flotantes */
-.contenedor {
+.contenedor 
+{
     width: 80%;
     margin: auto;
     background: #ddd;
@@ -20,7 +23,8 @@ h1, h2 {
     border-radius: 10px;
 }
 
-.caja {
+.caja 
+{
     width: 45%;
     height: 100px;
     text-align: center;
@@ -31,28 +35,33 @@ h1, h2 {
     border-radius: 5px;
 }
 
-.caja1 {
+.caja1 
+{
     background-color: #3498db;
     float: left;
 }
 
-.caja2 {
+.caja2 
+{
     background-color: #e74c3c;
     float: right;
 }
 
-.caja3 {
+.caja3 
+{
     background-color: #2ecc71;
     float: left;
 }
 
-.caja4 {
+.caja4
+{
     background-color: #f39c12;
     float: right;
 }
 
 /* Sección 2: Imagen flotante con texto envolvente */
-.texto-con-imagen {
+.texto-con-imagen 
+{
     width: 80%;
     margin: 20px auto;
     padding: 10px;
@@ -61,18 +70,21 @@ h1, h2 {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.texto-con-imagen img {
+.texto-con-imagen img 
+{
     float: left;
     margin-right: 15px;
     border-radius: 5px;
     border: 2px solid #ccc;
 }
 
-.texto-con-imagen p {
+.texto-con-imagen p 
+{
     text-align: justify;
 }
 
 /* Clearfix para evitar colapsos */
-.clear {
+.clear 
+{
     clear: both;
 }
