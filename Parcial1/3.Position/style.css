@@ -14,7 +14,7 @@ h1 {
 /* Estilo base para las cajas */
 .caja {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 120px;
+    height: 150px;
     width: 250px;
     text-align: center;
     border: 2px solid black;
@@ -33,7 +33,7 @@ h1 {
     position: fixed;
     background-color: #6a0dad;
     right: 20px;
-    top: 20px;
+    top: 70px;
     border: 3px solid #fff;
 }
 
