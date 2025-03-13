@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.caja {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 150px;
+    width: 250px;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    line-height: 1.2;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#caja1 {
+    width: 300px;
+    position: fixed;
+    background-color: #6a0dad;
+    right: 20px;
+    top: 70px;
+    border: 3px solid #fff;
+}
+
+#caja2 {
+    position: sticky;
+    background-color: #b22222;
+    top: 0px;
+    border-left: 5px solid white;
+}
+
+#caja3 {
+    background-color: #1e90ff;
+    border-bottom: 4px dashed white;
+}
+
+#caja4 {
+    position: relative;
+    width: 280px;
+    background-color: #ff8c00;
+    left: 50px;
+    top: 20px;
+    border: 4px double white;
+}
+
+#caja5 {
+    position: absolute;
+    background-color: #008000;
+    left: 50px;
+    top: 300px;
+    border: 3px solid yellow;
+}
+
+#caja6 {
+    position: absolute;
+    background-color: #ff1493;
+    left: 0px;
+    bottom: 20px;
+    border-radius: 50%;
+}
+
+#caja7 {
+    position: relative;
+    background-color: #4b0082;
+    left: -100px;
+    border: 3px dotted white;
+}
+
+#caja8 {
+    background-color: #696969;
+    border-right: 5px solid white;
+}
+
+#caja9 {
+    position: sticky;
+    background-color: #ff4500;
+    top: 20px;
+    border-top: 5px solid white;
+}

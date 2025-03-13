@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada en CSS</title>
+    <link rel="stylesheet" href="style.css"> <!-- Estilos externos -->
+    <style>
+        .contenedor {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .caja {
+            background-color: lightblue;
+            padding: 20px;
+            border: 3px dashed black;
+        }
+        p {
+            color: green;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Ejemplo de Cascada en CSS</h1>
+        <div class="caja" style="background-color: yellow; padding: 30px;"> <!-- Estilo en línea -->
+            <h2>Encabezado dentro de una caja</h2>
+            <p>Este es un párrafo con estilos en cascada.</p>
+            <ul>
+                <li class="especial">Elemento 1</li>
+                <li>Elemento 2</li>
+                <li class="especial">Elemento 3</li>
+            </ul>
+            <span class="texto-destacado">Texto con <b>negritas</b> y un <a href="#">enlace</a>.</span>
+        </div>
+    </div>
+</body>
+</html>
