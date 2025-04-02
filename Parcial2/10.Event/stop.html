@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio con stopPropagation()</title>
+</head>
+<body>
+    <div id="containerPadre" style="padding: 20px; background-color: lightcoral;">
+        Contenedor Padre
+        <div id="containerHijo" style="padding: 20px; background-color: lightblue;">
+            <button id="hijo1">Hijo 1</button>
+            <button id="hijo2">Hijo 2</button>
+            <button id="hijo3">Hijo 3</button>
+            <button id="hijo4">Hijo 4</button>
+        </div>
+
+        <div id="containerHijo2" style="padding: 20px; background-color: lightgreen;">
+            <button id="hijo5">Hijo 5</button>
+            <button id="hijo6">Hijo 6</button>
+            <button id="hijo7">Hijo 7</button>
+            <button id="hijo8">Hijo 8</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('containerPadre').addEventListener("click", function(evento) {
+                alert("¡Clic en el Contenedor Padre!");
+            });
+
+            const botones = document.querySelectorAll('button');
+            botones.forEach(boton => {
+                boton.addEventListener("click", function(evento) {
+                    alert(`¡Clic en el botón ${boton.textContent}!`);
+                    evento.stopPropagation(); 
+                });
+            });
+        }
+    </script>
+</body>
+</html>

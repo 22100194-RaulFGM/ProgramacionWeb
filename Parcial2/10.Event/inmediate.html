@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stopImmediatePropagation Example</title>
+</head>
+<body>
+    <button id="superButton">Presióname</button>
+
+    <script>
+        const button = document.getElementById("superButton");
+
+        button.addEventListener("click", function() {
+            alert("Handler 1 ejecutado");
+        });
+
+        button.addEventListener("click", function(event) {
+            alert("Handler 2 ejecutado");
+            event.stopImmediatePropagation(); 
+        });
+
+        button.addEventListener("click", function() {
+            alert("Handler 3 ejecutado");
+        });
+    </script>
+</body>
+</html>
