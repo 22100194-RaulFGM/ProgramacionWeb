@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo XMLHttpRequest</title>
+</head>
+<body>
+    <h1>Consulta con XMLHttpRequest</h1>
+    <button onclick="hacerPeticion()">Obtener Datos</button>
+    <img id="imagen" alt="Imagen" width="300">
+    <p id="resultado"></p>
+
+    <script>
+        windows.onload = function() {
+            hacerPeticion();
+            document.getElementById('btnCargar').addEventListener('click', hacerPeticion);
+        }
+
+        function hacerPeticion() {
+            var peticion = new XMLHttpRequest();
+            peticion.open('GET', 'https://randomfox.ca/images/53.jpg', true);
+            peticion.responseType = 'blob';
+            
+            peticion.onload = function () {
+                if (peticion.status === 200) {
+                    var imgURL = URL.createObjectURL(peticion.response);
+                    document.getElementById('imagen').src = imgURL;
+                }
+            };
+
+            peticion.send();
+        }
+
+    </script>
+</body>
+</html>
