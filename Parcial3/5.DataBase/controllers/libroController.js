@@ -20,9 +20,9 @@ exports.getLibroById = (req, res) => {
 
 // Crear un nuevo libro
 exports.createLibro = (req, res) => {
-  const { titulo, autor, editorial, fecha_publicacion } = req.body;
-  const query = 'INSERT INTO Libro (titulo, autor, editorial, fecha_publicacion) VALUES (?, ?, ?, ?)';
-  db.query(query, [titulo, autor, editorial, fecha_publicacion], (err, result) => {
+  const { titulo, autor, editorial, fecha_publicacion, genero } = req.body;
+  const query = 'INSERT INTO Libro (titulo, autor, editorial, fecha_publicacion, genero) VALUES (?, ?, ?, ?, ?)';
+  db.query(query, [titulo, autor, editorial, fecha_publicacion, genero], (err, result) => {
     if (err) return res.status(500).json({ error: err.message });
     res.status(201).json({ message: 'Libro creado', id: result.insertId });
   });
@@ -32,10 +32,7 @@ exports.createLibro = (req, res) => {
 exports.updateLibro = (req, res) => {
   const { id } = req.params;
   const { titulo, autor, editorial, fecha_publicacion } = req.body;
-  const query = `
-    UPDATE Libro SET titulo = ?, autor = ?, editorial = ?, fecha_publicacion = ?
-    WHERE id_libro = ?
-  `;
+  const query = `UPDATE Libro SET titulo = ?, autor = ?, editorial = ?, fecha_publicacion = ?WHERE id_libro = ?`;
   db.query(query, [titulo, autor, editorial, fecha_publicacion, id], (err, result) => {
     if (err) return res.status(500).json({ error: err.message });
     if (result.affectedRows === 0) return res.status(404).json({ message: 'Libro no encontrado' });
